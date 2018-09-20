@@ -1,0 +1,24 @@
+import React from 'react';
+import {Row,Col} from 'antd';
+import Header from './compents/Header'
+import Footer from './compents/Footer'
+import NavLeft from './compents/NavLeft'
+import Home from './pages/home'
+import './style/common.less'
+export default class Admin  extends React.Component{
+    
+    render(){
+        return(
+            <Row className="container">
+                <Col span={4} className="nav-left"><NavLeft /></Col>
+                <Col span={20} className="main">
+                    <Header></Header>
+                    <Row className="content">
+                        <Home />
+                    </Row>
+                    <Footer />
+                </Col>
+            </Row> 
+        )
+    }
+}
